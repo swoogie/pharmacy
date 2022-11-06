@@ -9,7 +9,7 @@ namespace DRUGS.Pages
     public class CheckoutModel : PageModel
     {
         public string Title { get; set; }
-        public double Price { get; set; }
+        public float Price { get; set; }
         public string ImageTitle { get; set; }
 
         private readonly ApplicationDbContext _context;

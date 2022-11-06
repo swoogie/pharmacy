@@ -3,7 +3,8 @@
 @{
 }
 
-<h1>Your Order!</h1>
+<h1>Order has been made</h1>
+<p>Your order:</p>
 @{
     var imagePath = "~/images/medicine/" + @Model.ImageTitle;
 }
@@ -13,6 +14,6 @@
         <p>Your selection: @Model.Title</p>
         <p>Total price for your order is:</p>
         <p>@Model.Price</p>
-        <a class="btn alert-primary mt-1 mx-auto" asp-area="" asp-page="/ThankYou">Confirm Order</a>
+        <a class="btn alert-primary mt-1 mx-auto" asp-area="" asp-page="/ThankYou">Ok thank you come again</a>
     </div>
 </div>

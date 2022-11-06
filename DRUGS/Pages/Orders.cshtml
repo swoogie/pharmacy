@@ -2,3 +2,40 @@
 @model DRUGS.Pages.OrdersModel
 @{
 }
+
+<h3>Orders</h3>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+           
+        @foreach(var order in Model.Orders){
+            <tr>
+                <td>
+                    @order.Id
+                </td>
+                <td>
+                    @order.Title
+                </td>
+                <td>
+                    @order.Price
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
