@@ -1,0 +1,77 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <div class="mainText">
+        <h1 class="display-4">Welcome to DRUGS!</h1>
+        <h2 class="maincard-subtitle">DRUGS, is the medicine for you and me!</h2>
+        <h3 class="pb-2 customTextGradient"> Yum yum!</h3>
+    </div>
+
+    <img class="mainImage rounded shadow" src="~/images/main_page.gif"/>
+    <br/>
+    <a href="#categories" class="btn btn-primary mt-3">LET'S GET DRUGGED UP!</a>
+    <br/>
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5 mt-5" id="categories">
+                <div class="w-100 row">
+                    <div class="col-3">
+                        <div class="card rounded shadow">
+                            <div style="background-image: linear-gradient(45deg, cyan, magenta); border-radius: 1px 1px" class="pt-4 pb-3">
+                                <p style="transform: rotate(5deg); color:white; font-weight: bold;">Medicine 50% OFF!</p>
+                            </div>
+                            <div class="card-body">
+                                    <h5 class="card-title">MEDICINE</h5>
+                                    <p class="card-text">For all your medicinal needs! Now at a discount!</p>
+                                <a class="btn btn-primary" asp-area="" asp-page="/Categories/Medicine">See medicine</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card rounded shadow">
+                            <div style="background-image: linear-gradient(45deg, Red, Orange); border-radius: 1px 1px" class="pt-4 pb-3">
+                                <p style="transform: rotate(5deg); color:white; font-weight: bold;">Vitamins 30% OFF!</p>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">VITAMINS <span class="badge bg-primary">New</span></h5>
+                                <p class="card-text">For all your vitamin needs! Now at a discount!</p>
+                                <a class="btn btn-primary" asp-area="" asp-page="/Categories/Vitamins">See vitamins</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card rounded shadow">
+                            <div style="background-image: linear-gradient(45deg, Fuchsia, Gold); border-radius: 1px 1px" class="pt-4 pb-3">
+                                <p style="transform: rotate(5deg); color:white; font-weight: bold;">Supplements 20% OFF!</p>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">SUPPLEMENTS</h5>
+                                <p class="card-text">For all your supplement needs! Now at a discount!</p>
+                                <a class="btn btn-primary" asp-area="" asp-page="/Categories/Supplements">See supplements</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card rounded shadow">
+                            <div style="background-image: linear-gradient(45deg, green, lime); border-radius: 1px 1px" class="pt-4 pb-3">
+                                <p style="transform: rotate(5deg); color:white; font-weight: bold;">Recreationals 90% OFF!</p>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">RECREATIONALS</h5>
+                                <p class="card-text">For all your recreational needs! Now at a discount!</p>
+                                <a class="btn btn-primary" asp-area="" asp-page="/Categories/Recreationals">See recreationals</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,40 @@
+﻿@page
+@model DRUGS.Pages.MedicineModel
+@{
+}
+
+<div class="text-center">
+    <div class="mainText">
+        <h2 class="display-4 text-black mb-5">Our great selection of <span class="customTextMedicineGradient">medicine!</span></h2>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        @foreach (var drug in Model.listOfMedicine)
+        { 
+            var imagePath = "~/images/medicine/" + drug.ImageTitle;
+            <div class="col-4 mb-5">
+                <div class="card rounded shadow">
+                    <img src="@imagePath" class="m-5" asp-append-version="true">
+                    <div class="card-body">
+                        <p class="card-title">@drug.Title</p>
+                        <p class="card-text">
+                            <a>@drug.Description</a>
+                            <br/>
+                            <a>Price: @drug.Price</a>
+                        </p>
+                        <a onclick="showAdded(this)" class="btn btn-primary"
+                       asp-route-ImageTitle="@drug.ImageTitle"
+                       asp-route-Title="@drug.Title"
+                       asp-route-Price="@drug.Price"
+                       asp-area="" asp-page="/Checkout">Buy</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
